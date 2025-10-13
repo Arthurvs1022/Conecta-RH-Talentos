@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastro | Conecta RH Talentos</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <div class="logo"><h1>Conecta RH Talentos</h1></div>
+  <nav>
+    <ul>
+      <li><a href="index.html">Início</a></li>
+      <li><a href="vagas.html">Vagas</a></li>
+      <li><a href="cadastro.html" class="active">Cadastre seu Currículo</a></li>
+      <li><a href="treinamento.html">Treinamento</a></li>
+      <li><a href="empresas.html">Empresas Parceiras</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main class="conteudo">
+  <h2>Cadastre seu Currículo</h2>
+  <form action="mailto:curriculum@conectarhtalentos.com.br" method="post" enctype="text/plain">
+    <label>Nome completo:</label>
+    <input type="text" name="nome" required>
+
+    <label>Idade:</label>
+    <input type="number" name="idade" required>
+
+    <label>Telefone:</label>
+    <input type="tel" name="telefone" required>
+
+    <label>Rua:</label>
+    <input type="text" name="rua">
+
+    <label>Bairro:</label>
+    <input type="text" name="bairro">
+
+    <label>Cidade:</label>
+    <input type="text" name="cidade">
+
+    <label>Estado:</label>
+    <input type="text" name="estado">
+
+    <label>Email:</label>
+    <input type="email" name="email" required>
+
+    <label>Vagas de interesse:</label>
+    <textarea name="mensagem" rows="4" placeholder="Você pode se cadastrar para mais de uma vaga"></textarea>
+
+    <p>📎 Envie seu currículo em PDF para o email:  
+      <strong>curriculum@conectarhtalentos.com.br</strong></p>
+
+    <p>Ou entre no grupo VIP de RH:</p>
+    <a href="#" class="btn">Entrar no Grupo VIP</a>
+
+    <h3>Consultoria Premium</h3>
+    <ul>
+      <li>Análise de currículo</li>
+      <li>Mentoria e Treinamento para entrevista</li>
+      <li>Consultoria de recolocação</li>
+      <li>Perfil comportamental</li>
+      <li>Indicação para empresas parceiras</li>
+    </ul>
+
+    <p>💰 Valor: <strong>R$ 29,90</strong> (taxa inicial, 30 dias)</p>
+
+    <img src="img/qrcode.png" alt="QR Code PIX" class="qrcode">
+
+    <p>Enviar comprovante para WhatsApp: <strong>(81) 9 8104-8840</strong></p>
+
+    <button type="submit" class="btn">Enviar Cadastro</button>
+  </form>
+</main>
+
+<footer>
+  <p>Email: <a href="mailto:gegconsultoriaetreinamento@gmail.com">gegconsultoriaetreinamento@gmail.com</a></p>
+  <p>WhatsApp: <a href="https://wa.me/5581981048840">(81) 9 8104-8840</a></p>
+</footer>
+</body>
+</html>
