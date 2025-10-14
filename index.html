@@ -8,7 +8,14 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 </head>
 <body>
-  <header>
+  <header class="header-index">
+  <div class="logo">
+    <h1>Conecta RH Talentos</h1>
+  </div>
+  <nav>
+    </nav>
+</header>
+ <!-- <header>
     <div class="logo">
       <h1>Conecta RH Talentos</h1>
     </div>
@@ -21,11 +28,42 @@
         <li><a href="empresas.html">Empresas Parceiras</a></li>
       </ul>
     </nav>
-  </header>
-
+  </header>-->
   <section class="banner">
-    <h2>Conectamos pessoas e empresas para construir histórias de sucesso.</h2>
-    <p>RH estratégico, humanizado e focado em resultados.</p>
+    <div class="banner-texto">
+        <h2>Conectamos pessoas e empresas para construir histórias de sucesso.</h2>
+        <p>RH estratégico, humanizado e focado em resultados. Encontre seu próximo desafio!</p>
+    </div>
+    <div class="search-box">
+        <input type="text" placeholder="Buscar vagas por cargo, área ou palavra-chave...">
+        <button class="btn-search"><i class="fa-solid fa-search"></i> Buscar</button>
+    </div>
+  </section>
+
+  <section class="categorias-populares">
+    <h2>Áreas de Destaque</h2>
+    <div class="categorias-grid">
+        <a href="vagas.html?area=tecnologia" class="cat-item">
+            <i class="fa-solid fa-laptop-code"></i>
+            <p>Tecnologia</p>
+        </a>
+        <a href="vagas.html?area=comercial" class="cat-item">
+            <i class="fa-solid fa-handshake"></i>
+            <p>Comercial</p>
+        </a>
+        <a href="vagas.html?area=servicos" class="cat-item">
+            <i class="fa-solid fa-wrench"></i>
+            <p>Serviços Gerais</p>
+        </a>
+        <a href="vagas.html?area=administrativo" class="cat-item">
+            <i class="fa-solid fa-chart-line"></i>
+            <p>Administrativo</p>
+        </a>
+        <a href="vagas.html?area=saude" class="cat-item">
+            <i class="fa-solid fa-heart-pulse"></i>
+            <p>Saúde</p>
+        </a>
+    </div>
   </section>
 
   <section class="stats-panel">
@@ -38,32 +76,36 @@
       <p>Vagas de emprego</p>
     </div>
     <div class="stat-card">
-      <h3>—</h3>
-      <p>Contatos recentes</p>
+      <h3>+1.5k</h3>
+      <p>Candidatos Aprovados</p>
     </div>
-    </section>
+  </section>
 
   <section class="dashboard">
-    <div class="card orange">
+    <a href="vagas.html" class="card orange link-card">
       <i class="fa-solid fa-briefcase"></i>
       <h3>Vagas</h3>
       <p>Confira as vagas abertas</p>
-    </div>
-    <div class="card green-light">
+    </a>
+    
+    <a href="cadastro.html" class="card green-light link-card">
       <i class="fa-solid fa-user-plus"></i>
       <h3>Currículos</h3>
       <p>Envios recebidos</p>
-    </div>
-    <div class="card pink">
-      <i class="fa-solid fa-users"></i>
-      <h3>Empresas</h3>
-      <p>Parceiras</p>
-    </div>
-    <div class="card blue">
+    </a>
+
+    <a href="treinamento.html" class="card blue link-card">
       <i class="fa-solid fa-chalkboard-teacher"></i>
       <h3>Treinamentos</h3>
       <p>Oferecidos</p>
-    </div>
+    </a>
+    
+    <a href="empresas.html" class="card pink link-card">
+      <i class="fa-solid fa-users"></i>
+      <h3>Empresas</h3>
+      <p>Parceiras</p>
+    </a>
+
   </section>
 
   <section class="sobre">
@@ -90,7 +132,7 @@
 <script>
     document.addEventListener('DOMContentLoaded', function() {
         const header = document.querySelector('header');
-        const scrollThreshold = 50; // Quantidade de pixels para rolar antes de diminuir o header
+        const scrollThreshold = 50; 
 
         function checkScroll() {
             if (window.scrollY > scrollThreshold) {
