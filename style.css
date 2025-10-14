@@ -447,7 +447,7 @@ footer .copy {
     font-size: 0.9rem;
 }
 
-/* Responsividade */
+/* Responsividade 
 @media (max-width: 768px) {
     nav ul {
         flex-direction: column;
@@ -462,4 +462,39 @@ footer .copy {
     .card, .box {
         width: 90%;
     }
+}
+
+/* ===== RESPONSIVIDADE ===== */
+@media screen and (max-width: 768px) {
+  header {
+    flex-direction: column;
+  }
+
+  header nav {
+    margin-top: 10px;
+  }
+
+  section {
+    padding: 40px 5%;
+  }
+}
+
+@media screen and (max-width: 428px) {
+  header .logo {
+    font-size: 1.4rem;
+  }
+
+  header nav a {
+    display: block;
+    margin: 8px 0;
+  }
+
+  .stat-box {
+    font-size: 14px;
+    padding: 18px;
+  }
+
+  .stat-box i {
+    font-size: 22px;
+  }
 }
