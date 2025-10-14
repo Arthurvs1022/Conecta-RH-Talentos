@@ -43,5 +43,22 @@
   <p>WhatsApp: <a href="https://wa.me/5581981048840">(81) 9 8104-8840</a></p>
   <p class="copy">© 2025 Conecta RH Talentos</p>
 </footer>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const header = document.querySelector('header');
+        const scrollThreshold = 50; // Quantidade de pixels para rolar antes de diminuir o header
+
+        function checkScroll() {
+            if (window.scrollY > scrollThreshold) {
+                header.classList.add('header-scrolled');
+            } else {
+                header.classList.remove('header-scrolled');
+            }
+        }
+
+        checkScroll();
+        window.addEventListener('scroll', checkScroll);
+    });
+</script>
 </body>
 </html>
