@@ -43,7 +43,20 @@ header {
   position: sticky;
   top: 0;
   z-index: 1000;
+  /* NOVO: Adiciona transição suave para animação */
+  transition: all 0.3s ease; /* */
 }
+
+/* NOVO: Classe para diminuir o cabeçalho ao rolar */
+.header-scrolled {
+    padding: 5px 20px; /* Reduz o padding vertical */
+}
+
+.header-scrolled .logo h1 {
+    font-size: 1.5rem; /* Diminui o tamanho da fonte do logo */
+    transition: font-size 0.3s ease;
+}
+
 
 header .logo h1 {
   font-size: 1.8rem;
@@ -123,21 +136,6 @@ nav ul li a.active {
 .pink { background: #F87171; }
 .blue { background: #2563EB; }
 /* etc para outras cores */
-
-/* Responsividade */
-@media (max-width: 600px) {
-  .dashboard {
-    flex-direction: column;
-    align-items: center;
-  }
-  .stat-card {
-    width: 90%;
-    margin-bottom: 15px;
-  }
-  .card {
-    width: 90%;
-  }
-}
 
 
 /* Reset básico */
@@ -447,23 +445,6 @@ footer .copy {
     font-size: 0.9rem;
 }
 
-/* Responsividade 
-@media (max-width: 768px) {
-    nav ul {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .cards, .caixas-treinamento {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .card, .box {
-        width: 90%;
-    }
-}
-
 /* ===== RESPONSIVIDADE ===== */
 @media screen and (max-width: 768px) {
   header {
@@ -496,5 +477,10 @@ footer .copy {
 
   .stat-box i {
     font-size: 22px;
+  }
+  
+  /* NOVO: Ajuste para cabeçalho rolado */
+  .header-scrolled {
+      padding: 5px 20px; /* Mantém o padding pequeno em mobile quando rolado */
   }
 }
