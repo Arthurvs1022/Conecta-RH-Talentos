@@ -28,7 +28,6 @@
     <p>RH estratégico, humanizado e focado em resultados.</p>
   </section>
 
-  <!-- Painel de destaque inspirado no Solutudo -->
   <section class="stats-panel">
     <div class="stat-card">
       <h3>16.635</h3>
@@ -42,10 +41,8 @@
       <h3>—</h3>
       <p>Contatos recentes</p>
     </div>
-    <!-- Você pode adicionar mais cartões se quiser -->
-  </section>
+    </section>
 
-  <!-- Painel de cards informativos -->
   <section class="dashboard">
     <div class="card orange">
       <i class="fa-solid fa-briefcase"></i>
@@ -90,5 +87,22 @@
     <p>Contato: <a href="mailto:gegconsultoriaetreinamento@gmail.com">gegconsultoriaetreinamento@gmail.com</a> | WhatsApp: (81) 9 8104-8840</p>
     <p>&copy; 2025 Conecta RH Talentos – Todos os direitos reservados.</p>
   </footer>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const header = document.querySelector('header');
+        const scrollThreshold = 50; // Quantidade de pixels para rolar antes de diminuir o header
+
+        function checkScroll() {
+            if (window.scrollY > scrollThreshold) {
+                header.classList.add('header-scrolled');
+            } else {
+                header.classList.remove('header-scrolled');
+            }
+        }
+
+        checkScroll();
+        window.addEventListener('scroll', checkScroll);
+    });
+</script>
 </body>
 </html>
