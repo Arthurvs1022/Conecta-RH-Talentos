@@ -67,7 +67,9 @@
 
     <p>💰 Valor: <strong>R$ 29,90</strong> (taxa inicial, 30 dias)</p>
 
-    <img src="img/qrcode.png" alt="QR Code PIX" class="qrcode">
+    <div class="pix">
+      <img src="img/qrcode.png" alt="QR Code PIX">
+    </div>
 
     <p>Enviar comprovante para WhatsApp: <strong>(81) 9 8104-8840</strong></p>
 
@@ -82,7 +84,7 @@
 <script>
     document.addEventListener('DOMContentLoaded', function() {
         const header = document.querySelector('header');
-        const scrollThreshold = 50; // Quantidade de pixels para rolar antes de diminuir o header
+        const scrollThreshold = 50; 
 
         function checkScroll() {
             if (window.scrollY > scrollThreshold) {
