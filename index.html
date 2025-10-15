@@ -15,20 +15,7 @@
   <nav>
     </nav>
 </header>
- <!-- <header>
-    <div class="logo">
-      <h1>Conecta RH Talentos</h1>
-    </div>
-    <nav>
-      <ul>
-        <li><a href="index.html" class="active">Início</a></li>
-        <li><a href="vagas.html">Vagas</a></li>
-        <li><a href="cadastro.html">Cadastre seu Currículo</a></li>
-        <li><a href="treinamento.html">Treinamento</a></li>
-        <li><a href="empresas.html">Empresas Parceiras</a></li>
-      </ul>
-    </nav>
-  </header>-->
+
   <section class="banner">
     <div class="banner-texto">
         <h2>Conectamos pessoas e empresas para construir histórias de sucesso.</h2>
@@ -129,22 +116,6 @@
     <p>Contato: <a href="mailto:gegconsultoriaetreinamento@gmail.com">gegconsultoriaetreinamento@gmail.com</a> | WhatsApp: (81) 9 8104-8840</p>
     <p>&copy; 2025 Conecta RH Talentos – Todos os direitos reservados.</p>
   </footer>
-<script>
-    document.addEventListener('DOMContentLoaded', function() {
-        const header = document.querySelector('header');
-        const scrollThreshold = 50; 
-
-        function checkScroll() {
-            if (window.scrollY > scrollThreshold) {
-                header.classList.add('header-scrolled');
-            } else {
-                header.classList.remove('header-scrolled');
-            }
-        }
-
-        checkScroll();
-        window.addEventListener('scroll', checkScroll);
-    });
-</script>
+<script src="mobile-navbar.js"></script>
 </body>
 </html>

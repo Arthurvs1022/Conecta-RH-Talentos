@@ -12,13 +12,18 @@
         <h1>Conecta RH Talentos</h1>
     </div>
     <nav>
-        <ul>
-            <li><a href="index.html">Início</a></li>
-            <li><a href="vagas.html">Vagas</a></li>
-            <li><a href="cadastro.html">Cadastre seu Currículo</a></li>
-            <li><a href="treinamento.html">Treinamento</a></li>
-            <li><a href="empresas.html" class="active">Empresas Parceiras</a></li>
-        </ul>
+      <div class="mobile-menu">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+      </div>
+      <ul class="nav-list">
+          <li><a href="index.html">Início</a></li>
+          <li><a href="vagas.html">Vagas</a></li>
+          <li><a href="cadastro.html">Cadastre seu Currículo</a></li>
+          <li><a href="treinamento.html">Treinamento</a></li>
+          <li><a href="empresas.html" class="active">Empresas Parceiras</a></li>
+      </ul>
     </nav>
 </header>
 
@@ -63,40 +68,7 @@
         ou pelo WhatsApp:  
         <a href="https://wa.me/5581981048840" target="_blank">(81) 9 8104-8840</a>
     </p>
-</section>
 
-  <!--  <section class="formulario">
-        <h3>Cadastre sua Empresa</h3>
-         <form action="mailto:gegconsultoriaetreinamento@gmail.com" method="post" enctype="text/plain"> 
-        <form>
-            <label>Razão Social:</label>
-            <input type="text" placeholder="Nome da empresa" required>
-
-            <label>Nome Fantasia:</label>
-            <input type="text" placeholder="Nome comercial" required>
-
-            <label>Telefone de Contato:</label>
-            <input type="tel" placeholder="(xx) xxxxx-xxxx" required>
-
-            <label>Endereço:</label>
-            <input type="text" placeholder="Rua, número, bairro, cidade" required>
-
-            <label>CNPJ:</label>
-            <input type="text" placeholder="00.000.000/0001-00" required>
-
-            <label>Email:</label>
-            <input type="email" placeholder="email@empresa.com.br" required>
-
-            <button type="submit" class="btn">Enviar Cadastro</button>
-        </form> -->
-
-        <p class="enviar">
-            Envie também por email:  
-            <a href="mailto:gegconsultoriaetreinamento@gmail.com">gegconsultoriaetreinamento@gmail.com</a><br>
-            ou pelo WhatsApp:  
-            <a href="https://wa.me/5581981048840" target="_blank">(81) 9 8104-8840</a>
-        </p>
-    </section>
 </main>
 
 <footer>
@@ -104,22 +76,6 @@
     <p>WhatsApp: <a href="https://wa.me/5581981048840" target="_blank">(81) 9 8104-8840</a></p>
     <p class="copy">© 2025 Conecta RH Talentos - Todos os direitos reservados.</p>
 </footer>
-<script>
-    document.addEventListener('DOMContentLoaded', function() {
-        const header = document.querySelector('header');
-        const scrollThreshold = 50; 
-
-        function checkScroll() {
-            if (window.scrollY > scrollThreshold) {
-                header.classList.add('header-scrolled');
-            } else {
-                header.classList.remove('header-scrolled');
-            }
-        }
-
-        checkScroll();
-        window.addEventListener('scroll', checkScroll);
-    });
-</script>
+<script src="mobile-navbar.js"></script>
 </body>
 </html>

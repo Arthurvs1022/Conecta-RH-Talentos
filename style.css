@@ -40,6 +40,122 @@ header .logo h1 {
     font-size: 1.8rem;
 
 }
+/* Adicionado: Estrutura do ícone hambúrguer */
+.mobile-menu {
+    display: none; /* Escondido por padrão (desktop) */
+    cursor: pointer;
+    /* Adiciona margem para não encostar no menu */
+    margin-left: 400px;
+    margin-top: -50px;
+}
+
+.mobile-menu div {
+    width: 30px;
+    height: 3px;
+    background: #fff; /* Cor branca do seu header */
+    margin: 6px 0;
+    transition: 0.3s;
+}
+
+/* Modificado: A sua nav original usava <ul> sem classe, vamos usar a classe nav-list */
+/* Em desktop, garantimos que a lista continue sendo exibida em linha */
+header nav ul {
+    /* Mantém o seu estilo original do nav ul */
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    margin-top: 0;
+}
+
+/* ======================================= */
+/* === Media Query (Para Telas Menores)=== */
+/* ======================================= */
+
+@media screen and (max-width: 768px) {
+  /* Exibir o ícone hambúrguer em mobile */
+  .mobile-menu {
+    display: block;
+    /* Garante que o menu hambúrguer fique à direita e acima de tudo */
+    z-index: 1001; 
+  }
+    
+  /* A sua lista de links original (nav ul) será o menu lateral/vertical */
+  header nav ul {
+    /* Oculta o menu original em mobile */
+    display: none; 
+    
+    position: absolute;
+    top: 60px; /* Ajustado para ficar abaixo do seu header fixo (aprox. altura 60px) */
+    right: 0;
+    width: 70%; /* Largura do menu lateral em mobile */
+    height: calc(100vh - 60px); 
+    background: #6a1b9a; /* Fundo roxo do seu site */
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start; 
+    padding-top: 20px;
+    
+    transform: translateX(100%); /* Esconde o menu para a direita */
+    transition: transform 0.3s ease-in;
+    z-index: 1000;
+  }
+  
+  /* Garante que o logo e a nav fiquem lado a lado no header */
+  header {
+    flex-direction: row; 
+  }
+  
+  header nav {
+    /* Remove a margem da sua regra original para nav em 768px */
+    margin-top: 0;
+  }
+
+  /* Estilos para os itens da lista no menu mobile */
+  header nav ul li {
+    margin: 15px 0;
+    width: 100%;
+    text-align: center;
+    opacity: 0; /* Esconde links para animação */
+  }
+
+  header nav ul li a {
+      font-size: 1.1rem;
+      display: block;
+      padding: 10px;
+  }
+
+  /* Estado ativo: Menu visível */
+  header nav ul.active {
+    display: flex; /* Exibe a lista quando ativa */
+    transform: translateX(0);
+  }
+}
+
+/* Animação dos links (usada pelo mobile-navbar.js) */
+@keyframes navLinkFade {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Animação do ícone Hambúrguer (transforma em X) */
+.mobile-menu.active .line1 {
+  transform: rotate(-45deg) translate(-8px, 8px);
+}
+
+.mobile-menu.active .line2 {
+  opacity: 0;
+}
+
+.mobile-menu.active .line3 {
+  transform: rotate(45deg) translate(-5px, -7px);
+}
 
 nav ul {
     list-style: none;
@@ -392,6 +508,7 @@ footer a {
     color: #fff;
     text-decoration: underline;
 }
+
 
 /* ===== RESPONSIVIDADE ===== */
 @media screen and (max-width: 768px) {
