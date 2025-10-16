@@ -23,12 +23,11 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    transition: all 0.3s ease; /* Adiciona transição suave para animação */
+    transition: all 0.3s ease; 
 }
 
-/* Classe para diminuir o cabeçalho ao rolar */
 .header-scrolled {
-    padding: 5px 20px; /* Reduz o padding vertical */
+    padding: 5px 20px; 
 }
 
 .header-scrolled .logo h1 {
@@ -40,27 +39,23 @@ header .logo h1 {
     font-size: 1.8rem;
 
 }
-/* Adicionado: Estrutura do ícone hambúrguer */
+
 .mobile-menu {
-    display: none; /* Escondido por padrão (desktop) */
+    display: none; 
     cursor: pointer;
-    /* Adiciona margem para não encostar no menu */
-    margin-left: 400px;
+    margin-left: 360px;
     margin-top: -50px;
 }
 
 .mobile-menu div {
     width: 30px;
     height: 3px;
-    background: #fff; /* Cor branca do seu header */
+    background: #fff;
     margin: 6px 0;
     transition: 0.3s;
 }
 
-/* Modificado: A sua nav original usava <ul> sem classe, vamos usar a classe nav-list */
-/* Em desktop, garantimos que a lista continue sendo exibida em linha */
 header nav ul {
-    /* Mantém o seu estilo original do nav ul */
     list-style: none;
     display: flex;
     justify-content: flex-end;
@@ -68,55 +63,43 @@ header nav ul {
     margin-top: 0;
 }
 
-/* ======================================= */
-/* === Media Query (Para Telas Menores)=== */
-/* ======================================= */
-
 @media screen and (max-width: 768px) {
-  /* Exibir o ícone hambúrguer em mobile */
   .mobile-menu {
     display: block;
-    /* Garante que o menu hambúrguer fique à direita e acima de tudo */
     z-index: 1001; 
   }
     
-  /* A sua lista de links original (nav ul) será o menu lateral/vertical */
   header nav ul {
-    /* Oculta o menu original em mobile */
-    display: none; 
-    
+    display: none;  
     position: absolute;
-    top: 60px; /* Ajustado para ficar abaixo do seu header fixo (aprox. altura 60px) */
+    top: 60px;
     right: 0;
-    width: 70%; /* Largura do menu lateral em mobile */
+    width: 70%; 
     height: calc(100vh - 60px); 
-    background: #6a1b9a; /* Fundo roxo do seu site */
+    background: #6a1b9a; 
     flex-direction: column;
     align-items: center;
     justify-content: flex-start; 
     padding-top: 20px;
     
-    transform: translateX(100%); /* Esconde o menu para a direita */
+    transform: translateX(100%); 
     transition: transform 0.3s ease-in;
     z-index: 1000;
   }
-  
-  /* Garante que o logo e a nav fiquem lado a lado no header */
+    
   header {
     flex-direction: row; 
   }
   
   header nav {
-    /* Remove a margem da sua regra original para nav em 768px */
     margin-top: 0;
   }
 
-  /* Estilos para os itens da lista no menu mobile */
   header nav ul li {
     margin: 15px 0;
     width: 100%;
     text-align: center;
-    opacity: 0; /* Esconde links para animação */
+    opacity: 0; 
   }
 
   header nav ul li a {
@@ -125,14 +108,13 @@ header nav ul {
       padding: 10px;
   }
 
-  /* Estado ativo: Menu visível */
+ 
   header nav ul.active {
-    display: flex; /* Exibe a lista quando ativa */
+    display: flex; 
     transform: translateX(0);
   }
 }
 
-/* Animação dos links (usada pelo mobile-navbar.js) */
 @keyframes navLinkFade {
   from {
     opacity: 0;
@@ -144,7 +126,6 @@ header nav ul {
   }
 }
 
-/* Animação do ícone Hambúrguer (transforma em X) */
 .mobile-menu.active .line1 {
   transform: rotate(-45deg) translate(-8px, 8px);
 }
@@ -185,7 +166,6 @@ nav ul li a.active {
     border-radius: 6px;
 }
 
-/* Banner - focar na busca (Solutudo style) */
 .banner {
     background-color: #f3e5f5;
     text-align: center;
@@ -204,7 +184,6 @@ nav ul li a.active {
     margin-bottom: 30px;
 }
 
-/* Estilo da Caixa de Busca */
 .search-box {
     display: flex;
     justify-content: center;
@@ -239,7 +218,6 @@ nav ul li a.active {
     background-color: #4a148c;
 }
 
-/* Painel de estatísticas (Solutudo style) */
 .stats-panel {
     display: flex;
     justify-content: center;
@@ -405,7 +383,6 @@ nav ul li a.active {
     font-weight: bold;
 }
 
-/* Conteúdo principal (outras páginas) */
 .conteudo {
     padding: 40px 20px;
     max-width: 1000px;
