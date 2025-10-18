@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Empresas Parceiras | Conecta RH Talentos</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 </head>
 <body>
 <header>
@@ -34,32 +35,65 @@
     </p>
 
     <section class="servicos-empresas">
-        <h3>O que oferecemos</h3>
-        <ul>
-            <li>✔ Triagem de currículos</li>
-            <li>✔ Banco de talentos exclusivo</li>
-            <li>✔ Treinamentos para colaboradores</li>
-            <li>✔ Processos seletivos estruturados</li>
-            <li>✔ Treinamentos personalizados por área</li>
-            <li>✔ Treinamento Menor Aprendiz</li>
-            <li>✔ Implantação de integração alinhada à cultura da empresa</li>
-            <li>✔ Guia de indicação</li>
-            <li>✔ Consultoria de Departamento Pessoal</li>
-            <li>✔ Vagas para PCD</li>
-        </ul>
+        <h3>Nossos Serviços de RH Estratégico</h3>
+        
+        <div class="servicos-grid">
+            <div class="servico-card">
+                <i class="fa-solid fa-people-roof"></i>
+                <h4>Recrutamento e Seleção</h4>
+                <p>Encontre os talentos certos com a velocidade e precisão que sua empresa precisa. Processos otimizados e humanizados.</p>
+            </div>
+            <div class="servico-card">
+                <i class="fa-solid fa-chart-line"></i>
+                <h4>Consultoria de RH</h4>
+                <p>Estratégias personalizadas para desenvolvimento organizacional, análise de clima e gestão de desempenho.</p>
+            </div>
+            <div class="servico-card">
+                <i class="fa-solid fa-graduation-cap"></i>
+                <h4>Treinamento e Capacitação</h4>
+                <p>Programas in-company para desenvolver habilidades técnicas e comportamentais da sua equipe.</p>
+            </div>
+        </div>
+        
+        <h3 class="portal-titulo">Portal do Recrutador (Exclusivo para Parceiros)</h3>
+        
+        <div class="portal-beneficios-grid">
+            <div class="beneficio-item">
+                <i class="fa-solid fa-clipboard-list"></i>
+                <p><strong>Gestão de Vagas:</strong> Publique e gerencie suas próprias vagas com autonomia.</p>
+            </div>
+            <div class="beneficio-item">
+                <i class="fa-solid fa-magnifying-glass-chart"></i>
+                <p><strong>Triagem Inteligente:</strong> Filtragem automatizada de currículos por palavras-chave e requisitos.</p>
+            </div>
+            <div class="beneficio-item">
+                <i class="fa-solid fa-user-check"></i>
+                <p><strong>Testes e Entrevistas:</strong> Aplique testes e agende entrevistas diretamente na plataforma.</p>
+            </div>
+            <div class="beneficio-item">
+                <i class="fa-solid fa-chart-simple"></i>
+                <p><strong>Métricas e Relatórios:</strong> Acompanhe a performance das suas vagas e o pipeline de candidatos.</p>
+            </div>
+        </div>
+
     </section>
 
-    <section class="formulario">
-    <h3>Cadastre sua Empresa</h3>
+    <h3>Fale com nossa equipe e seja um Parceiro!</h3>
     <form action="mailto:gegconsultoriaetreinamento@gmail.com" method="post" enctype="text/plain">
         
         <label>Razão Social:</label>
-        <input type="text" name="razao_social" placeholder="Nome da empresa" required> <label>Nome Fantasia:</label>
-        <input type="text" name="nome_fantasia" placeholder="Nome comercial" required> <label>Telefone de Contato:</label>
-        <input type="tel" name="telefone" placeholder="(xx) xxxxx-xxxx" required> <label>Endereço:</label>
-        <input type="text" name="endereco" placeholder="Rua, número, bairro, cidade" required> <label>CNPJ:</label>
-        <input type="text" name="cnpj" placeholder="00.000.000/0001-00" required> <label>Email:</label>
-        <input type="email" name="email" placeholder="email@empresa.com.br" required> <button type="submit" class="btn">Enviar Cadastro</button>
+        <input type="text" name="razao_social" placeholder="Nome da empresa" required> 
+        <label>Nome Fantasia:</label>
+        <input type="text" name="nome_fantasia" placeholder="Nome comercial" required> 
+        <label>Telefone de Contato:</label>
+        <input type="tel" name="telefone" placeholder="(xx) xxxxx-xxxx" required> 
+        <label>Endereço:</label>
+        <input type="text" name="endereco" placeholder="Rua, número, bairro, cidade" required> 
+        <label>CNPJ:</label>
+        <input type="text" name="cnpj" placeholder="00.000.000/0001-00" required> 
+        <label>Email:</label>
+        <input type="email" name="email" placeholder="email@empresa.com.br" required> 
+        <button type="submit" class="btn">Enviar Cadastro</button>
     </form>
 
     <p class="enviar">
@@ -72,9 +106,9 @@
 </main>
 
 <footer>
-    <p>Email: <a href="mailto:gegconsultoriaetreinamento@gmail.com">gegconsultoriaetreinamento@gmail.com</a></p>
-    <p>WhatsApp: <a href="https://wa.me/5581981048840" target="_blank">(81) 9 8104-8840</a></p>
-    <p class="copy">© 2025 Conecta RH Talentos - Todos os direitos reservados.</p>
+  <p>Email: <a href="mailto:gegconsultoriaetreinamento@gmail.com">gegconsultoriaetreinamento@gmail.com</a></p>
+  <p>WhatsApp: <a href="https://wa.me/5581981048840">(81) 9 8104-8840</a></p>
+  <p class="copy">© 2025 Conecta RH Talentos</p>
 </footer>
 <script src="mobile-navbar.js"></script>
 </body>

@@ -27,15 +27,49 @@
 
 <main class="conteudo">
   <h2>Vagas Disponíveis</h2>
+
+  <div class="filtro-vagas">
+    <select name="localizacao" id="filtro-localizacao">
+      <option value="">Localização (Todos)</option>
+      <option value="recife">Recife/PE</option>
+      <option value="olinda">Olinda/PE</option>
+      <option value="remoto">Trabalho Remoto</option>
+      </select>
+
+    <select name="nivel" id="filtro-nivel">
+      <option value="">Nível (Todos)</option>
+      <option value="estagio">Estágio</option>
+      <option value="trainee">Trainee</option>
+      <option value="junior">Júnior</option>
+      <option value="pleno">Pleno</option>
+      <option value="senior">Sênior</option>
+    </select>
+
+    <select name="modalidade" id="filtro-modalidade">
+      <option value="">Modalidade (Todos)</option>
+      <option value="presencial">Presencial</option>
+      <option value="hibrido">Híbrido</option>
+      <option value="remoto">Remoto</option>
+    </select>
+
+    <select name="pcd" id="filtro-pcd">
+      <option value="">PCD (Todas)</option>
+      <option value="sim">Vagas PCD</option>
+      <option value="nao">Vagas não-PCD</option>
+    </select>
+    
+    <button class="btn-aplicar">Aplicar Filtros</button>
+  </div>
+  
   <ul class="lista-vagas">
-    <li>Analista de Suporte</li>
-    <li>Atendente</li>
-    <li>Barbeiro</li>
-    <li>Cabeleireiro</li>
-    <li>Manicure</li>
-    <li>Pedreiro</li>
-    <li>Vendedor Externo</li>
-    <li>Zelador</li>
+    <li data-localizacao="recife" data-nivel="pleno" data-modalidade="presencial" data-pcd="nao">Analista de Suporte - Presencial, Pleno (Recife/PE)</li>
+    <li data-localizacao="remoto" data-nivel="junior" data-modalidade="remoto" data-pcd="nao">Atendente - Remoto, Júnior</li>
+    <li data-localizacao="olinda" data-nivel="senior" data-modalidade="hibrido" data-pcd="sim">Barbeiro - Híbrido, Sênior, PCD (Olinda/PE)</li>
+    <li data-localizacao="recife" data-nivel="junior" data-modalidade="presencial" data-pcd="nao">Cabeleireiro - Presencial, Júnior (Recife/PE)</li>
+    <li data-localizacao="olinda" data-nivel="estagio" data-modalidade="presencial" data-pcd="nao">Manicure - Presencial, Estágio (Olinda/PE)</li>
+    <li data-localizacao="recife" data-nivel="pleno" data-modalidade="hibrido" data-pcd="sim">Pedreiro - Híbrido, Pleno, PCD (Recife/PE)</li>
+    <li data-localizacao="remoto" data-nivel="senior" data-modalidade="remoto" data-pcd="nao">Vendedor Externo - Remoto, Sênior</li>
+    <li data-localizacao="recife" data-nivel="junior" data-modalidade="presencial" data-pcd="nao">Zelador - Presencial, Júnior (Recife/PE)</li>
   </ul>
 
   <div class="botao-centro">
