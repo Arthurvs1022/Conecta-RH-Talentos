@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Treinamento | Conecta RH Talentos</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 </head>
 <body>
 <header>
@@ -35,29 +36,133 @@
       <button class="btn-aba">Guia de Profissões</button>
     </div>
 
-    <div class="aba-conteudo active" id="treinamentos">
-      <h3>Cursos e Capacitações</h3>
-      <p>Acelere sua carreira com nossos programas. Escolha entre cursos gratuitos, pagos e exclusivos para parceiros.</p>
-      
-      <div class="treinamentos-grid">
-        <div class="treinamento-card">
-          <h4>Soft Skills Essenciais</h4>
-          <p>Comunicação e Liderança (Grátis)</p>
-          <a href="#" class="btn-acesso">Acessar</a>
-        </div>
-        <div class="treinamento-card">
-          <h4>LinkedIn Power-Up</h4>
-          <p>Otimize seu perfil para Recrutadores (R$ 49,90)</p>
-          <a href="#" class="btn-acesso">Comprar</a>
-        </div>
-        <div class="treinamento-card">
-          <h4>Gestão de Pessoas</h4>
-          <p>Curso Avançado para RHs e Líderes (Exclusivo)</p>
-          <a href="#" class="btn-acesso">Parceiros</a>
-        </div>
-      </div>
-    </div>
+    <div class="aba-conteudo active cursos-pagina" id="treinamentos">
+        
+      <h2>Nossos Cursos</h2>
+      <p class="subtitulo-cursos">Aprenda no seu ritmo e desenvolva as habilidades que o mercado mais valoriza.</p>
 
+      <section class="cursos-grid">
+
+        <div class="curso-card" id="soft-skills">
+          <div class="curso-imagem">
+            <img src="img/Homem sorrindo.jpg" alt="Homem sorrindo">
+            <span class="curso-tag tag-green">Gratuito</span>
+          </div>
+          <div class="curso-conteudo">
+            <h3>Soft Skills Essenciais</h3>
+            <p>Aprenda comunicação, liderança e inteligência emocional.</p>
+            <a href="#" class="btn-curso-azul">Acessar Curso</a>
+          </div>
+        </div>
+
+        <div class="curso-card" id="linkedin">
+          <div class="curso-imagem">
+            <img src="img/Mulher usando celular.jpg" alt="Mulher usando celular">
+            <span class="curso-tag tag-yellow">R$ 49,90</span>
+          </div>
+          <div class="curso-conteudo">
+            <h3>LinkedIn Power-Up</h3>
+            <p>Otimize seu perfil e conquiste mais oportunidades.</p>
+            <a href="#" class="btn-curso-azul">Comprar Curso</a>
+          </div>
+        </div>
+
+        <div class="curso-card" id="gestao">
+          <div class="curso-imagem">
+            <img src="img/Equipe em reunião.jpeg" alt="Equipe em reunião">
+          </div>
+          <div class="curso-conteudo">
+            <h3>Gestão de Pessoas</h3>
+            <p>Domine técnicas de liderança e gestão de equipes de alta performance.</p>
+            <a href="#" class="btn-curso-azul">Portal Parceiros</a>
+          </div>
+        </div>
+
+        <div class="curso-card" id="excel">
+          <div class="curso-imagem">
+            <img src="img/Mulher sorrindo no computador.jpg" alt="Mulher sorrindo no computador">
+            <span class="curso-tag tag-yellow">R$ 29,90</span>
+          </div>
+          <div class="curso-conteudo">
+            <h3>Excel para RH</h3>
+            <p>Controle de folha, férias e indicadores com planilhas práticas.</p>
+            <a href="#" class="btn-curso-azul">Comprar Curso</a>
+          </div>
+        </div>
+        
+        <div class="curso-card" id="preparacao-entrevista">
+          <div class="curso-imagem">
+            <img src="img/Pessoas em uma entrevista de emprego.jpg" alt="Pessoas em uma entrevista de emprego">
+            <span class="curso-tag tag-yellow">R$ 39,90</span>
+          </div>
+          <div class="curso-conteudo">
+            <h3>Preparação para Entrevista</h3>
+            <p>Técnicas de Entrevista: Como se Apresentar Bem e responder perguntas difíceis.</p>
+            <a href="#" class="btn-curso-azul">Comprar Curso</a>
+          </div>
+        </div>
+
+        <div class="curso-card" id="comunicacao">
+          <div class="curso-imagem">
+            <img src="img/Pessoa falando em público.jpeg" alt="Pessoa falando em público">
+            <span class="curso-tag tag-green">Gratuito</span>
+          </div>
+          <div class="curso-conteudo">
+            <h3>Comunicação e Expressão</h3>
+            <p>Domine a Comunicação Assertiva e Profissional e a Oratória para Entrevistas.</p>
+            <a href="#" class="btn-curso-azul">Acessar Curso</a>
+          </div>
+        </div>
+        
+        <div class="curso-card" id="desenvolvimento-pessoal">
+          <div class="curso-imagem">
+            <img src="img/Pessoa meditando ou focada.jpg" alt="Pessoa meditando ou focada">
+            <span class="curso-tag tag-yellow">R$ 29,90</span>
+          </div>
+          <div class="curso-conteudo">
+            <h3>Desenvolvimento Pessoal</h3>
+            <p>Inteligência Emocional no Processo Seletivo, Autoconhecimento e Autoconfiança.</p>
+            <a href="#" class="btn-curso-azul">Comprar Curso</a>
+          </div>
+        </div>
+        
+        <div class="curso-card" id="marca-pessoal">
+          <div class="curso-imagem">
+            <img src="img/Pessoa analisando um currículo.jfif" alt="Pessoa analisando um currículo">
+            <span class="curso-tag tag-yellow">R$ 49,90</span>
+          </div>
+          <div class="curso-conteudo">
+            <h3>Currículo e Marca Pessoal</h3>
+            <p>Como Montar um Currículo Atraente e otimizar seu Perfil Profissional no LinkedIn.</p>
+            <a href="#" class="btn-curso-azul">Comprar Curso</a>
+          </div>
+        </div>
+
+        <div class="curso-card" id="simulacao">
+          <div class="curso-imagem">
+            <img src="img/Duas pessoas conversando em uma mesa.jfif" alt="Duas pessoas conversando em uma mesa">
+            <span class="curso-tag tag-yellow">R$ 59,90</span>
+          </div>
+          <div class="curso-conteudo">
+            <h3>Simulação e Prática</h3>
+            <p>Entrevista Simulada (Role Play) com Feedback Personalizado e Dinâmicas de Grupo.</p>
+            <a href="#" class="btn-curso-azul">Comprar Curso</a>
+          </div>
+        </div>
+        
+        <div class="curso-card" id="preparacao-tecnica">
+          <div class="curso-imagem">
+            <img src="img/Pessoa pesquisando em um notebook.jpg" alt="Pessoa pesquisando em um notebook">
+            <span class="curso-tag tag-green">Gratuito</span>
+          </div>
+          <div class="curso-conteudo">
+            <h3>Preparação Técnica</h3>
+            <p>Como Pesquisar sobre a Empresa e fazer Perguntas Inteligentes ao Recrutador.</p>
+            <a href="#" class="btn-curso-azul">Acessar Curso</a>
+          </div>
+        </div>
+
+      </section> </div>
     <div class="aba-conteudo" id="dicas-blog">
       <h3>Blog de Dicas Profissionais</h3>
       <p>Artigos e guias práticos para otimizar seu currículo, se destacar em entrevistas e planejar sua carreira.</p>
@@ -76,7 +181,7 @@
           <span class="tag">Mercado</span>
         </li>
       </ul>
-      <a href="#" class="btn-ver-mais">Ver todos os artigos</a>
+      <a href="#" class_pt="btn-ver-mais">Ver todos os artigos</a>
     </div>
 
     <div class="aba-conteudo" id="guia-profissoes">
@@ -106,7 +211,7 @@
 
 <footer>
   <p>Email: <a href="mailto:gegconsultoriaetreinamento@gmail.com">gegconsultoriaetreinamento@gmail.com</a></p>
-  <p>WhatsApp: <a href="https://wa.me/5581981048840">(81) 9 8104-8840</a></p>
+  <p>WhatsApp: <a href="httpsa://wa.me/5581981048840">(81) 9 8104-8840</a></p>
   <p class="copy">© 2025 Conecta RH Talentos</p>
 </footer>
 <script src="mobile-navbar.js"></script>

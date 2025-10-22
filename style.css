@@ -1,3 +1,4 @@
+/* Reset global para remover margens e paddings padrão */
 * {
     margin: 0;
     padding: 0;
@@ -16,6 +17,7 @@ header {
     background-color: #6a1b9a;
     color: #fff;
     padding: 10px 20px;
+    /* Faz o cabeçalho ficar fixo no topo ao rolar */
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -25,6 +27,7 @@ header {
     transition: all 0.3s ease; 
 }
 
+/* Classe adicionada via JS quando o usuário rola a página */
 .header-scrolled {
     padding: 5px 20px; 
 }
@@ -63,15 +66,19 @@ header nav ul {
     margin-top: 0;
 }
 
+/* ==================================== */
+/* INÍCIO - LÓGICA DO MENU MOBILE */
+/* ==================================== */
 
 @media screen and (max-width: 768px) {
 
+  /* Mostra o ícone "hamburger" em telas menores */
   .mobile-menu {
     display: block;
     z-index: 1001; 
   }
     
- 
+  /* Esconde o menu no mobile por padrão, deslizando para fora da tela */
   header nav ul {
     display: none; 
     position: absolute;
@@ -112,13 +119,14 @@ header nav ul {
       padding: 10px;
   }
 
+  /* Classe .active (adicionada via JS) mostra o menu */
   header nav ul.active {
     display: flex; 
     transform: translateX(0);
   }
 }
 
-
+/* Animação de fade-in para os links do menu mobile */
 @keyframes navLinkFade {
   from {
     opacity: 0;
@@ -130,6 +138,7 @@ header nav ul {
   }
 }
 
+/* Animação do "Hamburger" para "X" (controlado via JS) */
 .mobile-menu.active .line1 {
   transform: rotate(-45deg) translate(-8px, 8px);
 }
@@ -141,6 +150,10 @@ header nav ul {
 .mobile-menu.active .line3 {
   transform: rotate(45deg) translate(-5px, -7px);
 }
+
+/* ==================================== */
+/* FIM - LÓGICA DO MENU MOBILE */
+/* ==================================== */
 
 nav ul {
     list-style: none;
@@ -163,6 +176,7 @@ nav ul li a {
     border-radius: 6px;
 }
 
+/* Estilo do item de menu ativo (página atual) */
 nav ul li a:hover,
 nav ul li a.active {
     background-color: #fff;
@@ -267,6 +281,7 @@ nav ul li a.active {
 }
 
 .card {
+    /* flex: 1 1 180px -> cresce(1), encolhe(1), base(180px) */
     flex: 1 1 180px;
     color: #fff;
     text-align: center;
@@ -296,6 +311,7 @@ nav ul li a.active {
     opacity: 0.9;
 }
 
+/* Classes de Cores Reutilizáveis */
 .orange { background: #D97706; }
 .green-light { background: #10B981; }
 .pink { background: #F87171; }
@@ -386,12 +402,14 @@ nav ul li a.active {
     font-weight: bold;
 }
 
+/* Container principal para conteúdo das páginas */
 .conteudo {
     padding: 40px 20px;
     max-width: 1000px;
     margin: 0 auto;
 }
 
+/* Título roxo padrão das páginas */
 main.conteudo h2 {
     color: #6a1b9a;
     text-align: center;
@@ -418,6 +436,7 @@ main.conteudo h2 {
     margin-top: 30px;
 }
 
+/* Botão roxo padrão */
 .btn {
     background-color: #6a1b9a;
     color: #fff;
@@ -434,6 +453,7 @@ main.conteudo h2 {
     background-color: #4a148c;
 }
 
+/* Formulário padrão */
 main.conteudo form {
     max-width: 600px;
     margin: 20px auto;
@@ -488,7 +508,9 @@ footer a {
 }
 
 
-/* ===== RESPONSIVIDADE GERAL ===== */
+/* ==================================== */
+/* RESPONSIVIDADE GERAL */
+/* ==================================== */
 @media screen and (max-width: 768px) {
   header {
     flex-direction: column;
@@ -572,8 +594,8 @@ footer a {
 
 .filtro-vagas {
     display: flex;
-    flex-wrap: wrap; /* Permite quebrar linha em telas menores */
-    gap: 10px; /* Espaçamento entre os filtros */
+    flex-wrap: wrap; 
+    gap: 10px; 
     margin-bottom: 30px;
     padding: 15px;
     background-color: #f8f8f8;
@@ -588,8 +610,8 @@ footer a {
     border-radius: 4px;
     font-size: 1rem;
     box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.06);
-    flex-grow: 1; /* Faz os elementos crescerem para preencher o espaço */
-    max-width: 250px; /* Limite de largura para desktop */
+    flex-grow: 1; /* Faz os filtros ocuparem o espaço disponível */
+    max-width: 250px; 
     min-width: 150px;
 }
 
@@ -599,7 +621,7 @@ footer a {
 }
 
 .btn-aplicar {
-    background-color: #6a1b9a; /* Cor principal */
+    background-color: #6a1b9a; 
     color: #fff;
     border: none;
     cursor: pointer;
@@ -607,7 +629,7 @@ footer a {
 }
 
 .btn-aplicar:hover {
-    background-color: #4a148c; /* Cor mais escura no hover */
+    background-color: #4a148c; 
 }
 
 /* Responsividade para Filtros */
@@ -644,7 +666,6 @@ footer a {
     font-size: 1.6rem;
 }
 
-/* Estilo para os cards de serviço */
 .servicos-grid {
     display: flex;
     flex-wrap: wrap;
@@ -680,7 +701,6 @@ footer a {
     margin-bottom: 10px;
 }
 
-/* Estilo para o Portal do Recrutador */
 .portal-titulo {
     border-bottom: 3px solid #6a1b9a;
     display: block;
@@ -725,7 +745,6 @@ footer a {
     text-align: left;
 }
 
-/* Responsividade para Empresas */
 @media screen and (max-width: 768px) {
     .servico-card {
         flex-basis: 100%;
@@ -739,14 +758,14 @@ footer a {
 
 
 /* ==================================== */
-/* NOVO ESTILO PARA TREINAMENTO (Central de Carreira) */
+/* ESTILO PARA TREINAMENTO (Central de Carreira) */
 /* ==================================== */
 
 .recursos-carreira {
     margin-top: 30px;
 }
 
-/* Estilo para as Abas de Navegação */
+/* Estilo para as Abas de Navegação (Treinamento, Dicas, Guia) */
 .abas {
     display: flex;
     justify-content: center;
@@ -766,17 +785,19 @@ footer a {
     transition: border-bottom 0.3s, color 0.3s;
 }
 
+/* Mostra a borda roxa na aba ativa (controlado via JS) */
 .btn-aba:hover, .btn-aba.active {
     color: #6a1b9a;
     border-bottom: 3px solid #6a1b9a;
 }
 
-/* Conteúdo das Abas */
+/* Esconde todas as abas por padrão */
 .aba-conteudo {
     display: none;
     padding: 20px 0;
 }
 
+/* Mostra apenas a aba que está ativa (controlado via JS) */
 .aba-conteudo.active {
     display: block;
 }
@@ -792,7 +813,8 @@ footer a {
     margin-bottom: 20px;
 }
 
-/* Estilo para Treinamentos */
+/* Layout flexível para os cards de treinamento antigos (horizontal) */
+/* OBS: Esta regra não está mais visível no site, pois foi substituída pelo .cursos-grid */
 .treinamentos-grid {
     display: flex;
     flex-wrap: wrap;
@@ -815,6 +837,7 @@ footer a {
     margin-bottom: 10px;
 }
 
+/* Botão laranja dos cards antigos */
 .btn-acesso {
     display: inline-block;
     background-color: #D97706;
@@ -890,6 +913,7 @@ footer a {
 .profissao-card {
     flex: 1 1 400px;
     background-color: #fff;
+    /* Destaque roxo na borda esquerda */
     border-left: 5px solid #6a1b9a;
     padding: 20px;
     border-radius: 8px;
@@ -908,14 +932,14 @@ footer a {
 .profissao-card p {
     margin: 5px 0;
     font-size: 0.95rem;
-    text-align: left; /* Garante que o texto dentro do card fique alinhado à esquerda */
+    text-align: left; 
 }
 
 .profissao-card p strong {
     color: #4a148c;
 }
 
-/* Responsividade para Treinamento */
+/* Responsividade para a seção de Treinamento */
 @media screen and (max-width: 600px) {
     .abas {
         flex-wrap: wrap;
@@ -925,6 +949,7 @@ footer a {
         flex-grow: 1;
         margin: 5px 0;
     }
+    /* Faz os cards (antigos e guia) ocuparem 100% no mobile */
     .treinamento-card, .profissao-card {
         flex-basis: 100%;
         max-width: 100%;
@@ -939,4 +964,154 @@ footer a {
     .tag {
         margin-left: 0;
     }
+}
+
+/* ==================================== */
+/* ESTILO PARA PÁGINA DE CURSOS (NOVO DESIGN) */
+/* (Usado dentro da aba Treinamentos) */
+/* ==================================== */
+
+/* Classe 'cursos-pagina' é adicionada na aba para que estes estilos funcionem */
+/* Sobrescreve o h2 roxo padrão, usando o azul escuro do novo design */
+.cursos-pagina h2 {
+    color: #0d2c4f; 
+    font-size: 2.2rem;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.cursos-pagina .subtitulo-cursos {
+    color: #555; /* Cinza escuro para o subtítulo */
+    font-size: 1.1rem;
+    text-align: center;
+    margin-bottom: 30px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* O botão 'voltar' foi removido ao fundir as páginas, mas o estilo está aqui caso seja usado */
+.btn-voltar {
+    display: inline-block;
+    margin-bottom: 25px;
+    color: #6a1b9a; 
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s;
+}
+
+.btn-voltar i {
+    margin-right: 8px;
+}
+
+.btn-voltar:hover {
+    color: #4a148c; 
+    text-decoration: underline;
+}
+
+/* Grid (layout) dos cursos */
+.cursos-grid {
+    display: grid;
+    /* Cria um grid responsivo: auto-preenche com colunas que têm no mínimo 280px e no máximo 1fr (fração do espaço) */
+    /* Isso remove a necessidade de media queries para os cards */
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 25px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+/* Card individual (novo estilo) */
+.curso-card {
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    overflow: hidden; 
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.curso-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+/* Container da imagem (para tag overlay) */
+.curso-imagem {
+    /* Posição relativa para ancorar a tag de preço */
+    position: relative; 
+    width: 100%;
+    height: 230px; /* Altura fixa para a imagem */
+}
+
+.curso-imagem img {
+    width: 100%;
+    height: 100%;
+    /* Garante que a imagem cubra o espaço, sem distorcer */
+    object-fit: cover; 
+}
+
+/* Tag de preço/status (sobre a imagem) */
+.curso-tag {
+    /* Posição absoluta para sobrepor a tag na imagem */
+    position: absolute; 
+    bottom: 15px;
+    left: 15px;
+    font-size: 0.85rem;
+    font-weight: bold;
+    color: #fff; 
+    padding: 6px 14px;
+    border-radius: 6px;
+}
+
+/* Novas cores das tags */
+.tag-green {
+    background-color: #34a853; /* Verde do design */
+}
+
+.tag-yellow {
+    background-color: #fbbc05; /* Amarelo/Laranja do design */
+    color: #202124; /* Texto escuro para melhor contraste */
+}
+
+/* Conteúdo abaixo da imagem */
+.curso-conteudo {
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    /* flex-grow: 1; faz com que esta seção estique, forçando todos os cards a terem a mesma altura */
+    flex-grow: 1; 
+}
+
+.curso-conteudo h3 {
+    color: #0d2c4f; /* Novo Azul Escuro */
+    margin-bottom: 10px;
+    font-size: 1.4rem;
+}
+
+.curso-conteudo p {
+    font-size: 0.95rem;
+    color: #555; /* Novo Cinza */
+    margin-bottom: 20px;
+    /* Isso empurra o botão para o final do card */
+    flex-grow: 1; 
+}
+
+/* Novo botão azul */
+.btn-curso-azul {
+    display: block;
+    width: 100%;
+    background-color: #0d2c4f; /* Novo Azul Escuro */
+    color: #fff;
+    padding: 12px 15px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.btn-curso-azul:hover {
+    background-color: #1a4a7f; /* Um tom mais claro para o hover */
 }
