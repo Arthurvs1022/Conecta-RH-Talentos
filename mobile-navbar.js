@@ -63,10 +63,27 @@ mobileNavbar.init();
 // Espera o HTML ser totalmente carregado antes de executar o JS
 document.addEventListener('DOMContentLoaded', function() {
     
-    // ====================================
-    // Lógica do Header Scroll (Efeito de encolher o header)
-    // ====================================
     const header = document.querySelector('header');
+    // Garante que o código do header só execute se o header existir
+    if (header) {
+        setupHeaderScroll(header);
+    }
+
+    // Executa a lógica de filtro apenas se estiver na página de vagas
+    if (document.querySelector('.filtro-vagas')) {
+        setupVagasFilter();
+    }
+
+    // Executa a lógica de abas apenas se estiver na página de treinamento
+    if (document.querySelector('.abas')) {
+        setupTabs();
+    }
+});
+
+// ====================================
+// Lógica do Header Scroll (Efeito de encolher o header)
+// ====================================
+function setupHeaderScroll(header) {
     const scrollThreshold = 50; // Distância em pixels para o header encolher
 
     function checkScroll() {
@@ -80,11 +97,13 @@ document.addEventListener('DOMContentLoaded', function() {
 
     checkScroll(); // Verifica o scroll assim que a página carrega
     window.addEventListener('scroll', checkScroll); // Verifica o scroll continuamente
+}
 
-    // ====================================
-    // LÓGICA DE FILTRO DE VAGAS (vagas.html)
-    // ====================================
-    
+
+// ====================================
+// LÓGICA DE FILTRO DE VAGAS (vagas.html)
+// ====================================
+function setupVagasFilter() {
     // Seleciona os elementos da página de vagas
     const listaVagas = document.querySelector('.lista-vagas');
     const vagas = listaVagas ? listaVagas.querySelectorAll('li') : []; // Pega todos os <li> da lista
@@ -130,11 +149,12 @@ document.addEventListener('DOMContentLoaded', function() {
             vaga.style.display = mostrar ? 'list-item' : 'none';
         });
     }
+}
 
-    // ====================================
-    // LÓGICA DE ABAS (treinamento.html)
-    // ====================================
-
+// ====================================
+// LÓGICA DE ABAS (treinamento.html)
+// ====================================
+function setupTabs() {
     // Adiciona um evento de clique em CADA botão de aba
     document.querySelectorAll('.btn-aba').forEach(button => {
         button.addEventListener('click', function() {
@@ -147,13 +167,8 @@ document.addEventListener('DOMContentLoaded', function() {
             this.classList.add('active');
 
             // 3. Encontra o ID do conteúdo correspondente e o ativa
-            // (Converte o texto do botão, ex: "Dicas & Blog", para um ID, ex: "dicas-blog")
-            const targetId = this.textContent.toLowerCase()
-                                .replace(/ & /g, '-')
-                                .replace(/ /g, '-')
-                                .replace(/á/g, 'a')
-                                .replace(/õ/g, 'o');
-            
+            // Usando data-target para uma conexão mais robusta
+            const targetId = this.dataset.target;
             const targetContent = document.getElementById(targetId);
             
             // 4. Se o conteúdo existir, adiciona a classe 'active' para mostrá-lo
@@ -162,4 +177,4 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     });
-});
+}

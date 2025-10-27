@@ -30,20 +30,30 @@
 
   <div class="filtro-vagas">
     <select name="localizacao" id="filtro-localizacao">
-      <option value="">Localização (Todos)</option>
-      <option value="recife">Recife/PE</option>
-      <option value="olinda">Olinda/PE</option>
-      <option value="remoto">Trabalho Remoto</option>
-      </select>
+  <option value="">Localização (Todos)</option>
+  <option value="remoto">Trabalho Remoto</option>
+  <option value="recife">Recife</option>
+  <option value="olinda">Olinda</option>
+  <option value="tamandare">Tamandaré</option>
+  <option value="rio-formoso">Rio Formoso</option>
+  <option value="sirinhaem">Sirinhaém</option>
+  <option value="barreiros">Barreiros</option>
+  <option value="sao-jose-da-coroa-grande">São José da Coroa Grande</option>
+  <option value="ipojuca">Ipojuca</option>
+  <option value="cabo-de-santo-agostinho">Cabo de Santo Agostinho</option>
+  <option value="escada">Escada</option>
+  <option value="ribeirao">Ribeirão</option>
+  <option value="gameleira">Gameleira</option>
+  <option value="joaquim-nabuco">Joaquim Nabuco</option>
+  <option value="palmares">Palmares</option>
+  <option value="agua-preta">Água Preta</option>
+  <option value="catende">Catende</option>
+  <option value="maraial">Maraial</option>
+  <option value="belem-de-maria">Belém de Maria</option>
+  <option value="jaqueira">Jaqueira</option>
+  <option value="sao-benedito-do-sul">São Benedito do Sul</option>
+</select>
 
-    <select name="nivel" id="filtro-nivel">
-      <option value="">Nível (Todos)</option>
-      <option value="estagio">Estágio</option>
-      <option value="trainee">Trainee</option>
-      <option value="junior">Júnior</option>
-      <option value="pleno">Pleno</option>
-      <option value="senior">Sênior</option>
-    </select>
 
     <select name="modalidade" id="filtro-modalidade">
       <option value="">Modalidade (Todos)</option>
@@ -53,24 +63,58 @@
     </select>
 
     <select name="pcd" id="filtro-pcd">
-      <option value="">PCD (Todas)</option>
+      <option value="">Todas</option>
       <option value="sim">Vagas PCD</option>
-      <option value="nao">Vagas não-PCD</option>
     </select>
     
     <button class="btn-aplicar">Aplicar Filtros</button>
   </div>
   
   <ul class="lista-vagas">
-    <li data-localizacao="recife" data-nivel="pleno" data-modalidade="presencial" data-pcd="nao">Analista de Suporte - Presencial, Pleno (Recife/PE)</li>
-    <li data-localizacao="remoto" data-nivel="junior" data-modalidade="remoto" data-pcd="nao">Atendente - Remoto, Júnior</li>
-    <li data-localizacao="olinda" data-nivel="senior" data-modalidade="hibrido" data-pcd="sim">Barbeiro - Híbrido, Sênior, PCD (Olinda/PE)</li>
-    <li data-localizacao="recife" data-nivel="junior" data-modalidade="presencial" data-pcd="nao">Cabeleireiro - Presencial, Júnior (Recife/PE)</li>
-    <li data-localizacao="olinda" data-nivel="estagio" data-modalidade="presencial" data-pcd="nao">Manicure - Presencial, Estágio (Olinda/PE)</li>
-    <li data-localizacao="recife" data-nivel="pleno" data-modalidade="hibrido" data-pcd="sim">Pedreiro - Híbrido, Pleno, PCD (Recife/PE)</li>
-    <li data-localizacao="remoto" data-nivel="senior" data-modalidade="remoto" data-pcd="nao">Vendedor Externo - Remoto, Sênior</li>
-    <li data-localizacao="recife" data-nivel="junior" data-modalidade="presencial" data-pcd="nao">Zelador - Presencial, Júnior (Recife/PE)</li>
-  </ul>
+  <li class="vaga" data-localizacao="recife" data-modalidade="presencial" data-pcd="nao">
+    <span class="cargo">Analista de Suporte</span> – 
+    <span class="modalidade">Presencial</span>, 
+    <span class="nivel">Pleno</span> (<span class="cidade">Recife/PE</span>)
+  </li>
+  <li class="vaga" data-localizacao="remoto" data-modalidade="remoto" data-pcd="nao">
+    <span class="cargo">Atendente</span> – 
+    <span class="modalidade">Remoto</span>, 
+    <span class="nivel">Júnior</span>
+  </li>
+  <li class="vaga" data-localizacao="olinda" data-modalidade="hibrido" data-pcd="sim">
+    <span class="cargo">Barbeiro</span> – 
+    <span class="modalidade">Híbrido</span>, 
+    <span class="nivel">Sênior</span>, 
+    <span class="extra">PCD</span> (<span class="cidade">Olinda/PE</span>)
+  </li>
+  <li class="vaga" data-localizacao="recife" data-modalidade="presencial" data-pcd="nao">
+    <span class="cargo">Cabeleireiro</span> – 
+    <span class="modalidade">Presencial</span>, 
+    <span class="nivel">Júnior</span> (<span class="cidade">Recife/PE</span>)
+  </li>
+  <li class="vaga" data-localizacao="olinda" data-modalidade="presencial" data-pcd="nao">
+    <span class="cargo">Manicure</span> – 
+    <span class="modalidade">Presencial</span>, 
+    <span class="nivel">Estágio</span> (<span class="cidade">Olinda/PE</span>)
+  </li>
+  <li class="vaga" data-localizacao="recife" data-modalidade="hibrido" data-pcd="sim">
+    <span class="cargo">Pedreiro</span> – 
+    <span class="modalidade">Híbrido</span>, 
+    <span class="nivel">Pleno</span>, 
+    <span class="extra">PCD</span> (<span class="cidade">Recife/PE</span>)
+  </li>
+  <li class="vaga" data-localizacao="remoto" data-modalidade="remoto" data-pcd="nao">
+    <span class="cargo">Vendedor Externo</span> – 
+    <span class="modalidade">Remoto</span>, 
+    <span class="nivel">Sênior</span>
+  </li>
+  <li class="vaga" data-localizacao="recife" data-modalidade="presencial" data-pcd="nao">
+    <span class="cargo">Zelador</span> – 
+    <span class="modalidade">Presencial</span>, 
+    <span class="nivel">Júnior</span> (<span class="cidade">Recife/PE</span>)
+  </li>
+</ul>
+
 
   <div class="botao-centro">
     <a href="cadastro.html" class="btn">Cadastre seu Currículo</a>
@@ -78,9 +122,9 @@
 </main>
 
 <footer>
-  <p>Email: <a href="mailto:gegconsultoriaetreinamento@gmail.com">gegconsultoriaetreinamento@gmail.com</a></p>
-  <p>WhatsApp: <a href="https://wa.me/5581981048840">(81) 9 8104-8840</a></p>
-  <p class="copy">© 2025 Conecta RH Talentos</p>
+  <p>NEXTWARE TECNOLOGIA E CONSULTORIA LTDA</p>
+  <p>CNPJ: 62.873.009/0001-64</p>
+  <p>Telefone/WhatsApp: <a href="https://wa.me/5545998151623" target="_blank">(45) 9 9815-1623</a></p>
 </footer>
 <script src="mobile-navbar.js"></script>
 </body>

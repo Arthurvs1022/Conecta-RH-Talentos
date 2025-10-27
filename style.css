@@ -1,9 +1,13 @@
+/* Importação das Fontes (Montserrat e Open Sans) */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans:wght@400;600&display=swap');
+
 /* Reset global para remover margens e paddings padrão */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Arial', sans-serif;
+    /* Fonte padrão alterada para Open Sans. Arial será usada se Open Sans falhar. */
+    font-family: 'Open Sans', 'Arial', sans-serif;
 }
 
 body {
@@ -39,14 +43,13 @@ header {
 
 header .logo h1 {
     font-size: 1.8rem;
-
+    /* Fonte do logo alterada para Montserrat */
+    font-family: 'Montserrat', sans-serif;
 }
 
 .mobile-menu {
     display: none; 
     cursor: pointer;
-    margin-left: 400px;
-    margin-top: -50px;
 }
 
 .mobile-menu div {
@@ -57,20 +60,16 @@ header .logo h1 {
     transition: 0.3s;
 }
 
-header nav ul {
-    
-    list-style: none;
-    display: flex;
-    justify-content: flex-end;
-    flex-wrap: wrap;
-    margin-top: 0;
-}
-
 /* ==================================== */
 /* INÍCIO - LÓGICA DO MENU MOBILE */
 /* ==================================== */
 
 @media screen and (max-width: 768px) {
+  /* Garante que o header não quebre o layout */
+  header {
+    justify-content: space-between;
+    align-items: center;
+  }
 
   /* Mostra o ícone "hamburger" em telas menores */
   .mobile-menu {
@@ -95,14 +94,6 @@ header nav ul {
     transform: translateX(100%); 
     transition: transform 0.3s ease-in;
     z-index: 1000;
-  }
-  
-  header {
-    flex-direction: row; 
-  }
-  
-  header nav {
-    margin-top: 0;
   }
 
   
@@ -195,6 +186,7 @@ nav ul li a.active {
     font-size: 2.2rem;
     color: #6a1b9a;
     margin-bottom: 10px;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .banner-texto p {
@@ -238,14 +230,6 @@ nav ul li a.active {
     background-color: #4a148c;
 }
 
-.stats-panel {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    margin: 30px auto;
-    max-width: 900px;
-}
-
 .stat-card {
     background-color: #f3e5f5;
     padding: 25px 40px;
@@ -264,6 +248,7 @@ nav ul li a.active {
     font-size: 2.2rem;
     color: #6a1b9a;
     margin-bottom: 8px;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .stat-card p {
@@ -271,6 +256,14 @@ nav ul li a.active {
     color: #4a148c;
 }
 
+.stats-panel {
+    display: flex;
+    flex-wrap: wrap; /* Permite que os itens quebrem para a próxima linha */
+    justify-content: center;
+    gap: 20px;
+    margin: 30px auto;
+    max-width: 900px;
+}
 .dashboard {
     display: flex;
     flex-wrap: wrap;
@@ -304,6 +297,7 @@ nav ul li a.active {
 .card h3 {
     font-size: 18px;
     margin: 5px 0;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .card p {
@@ -325,6 +319,7 @@ nav ul li a.active {
 .categorias-populares h2 {
     color: #6a1b9a;
     margin-bottom: 30px;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .categorias-grid {
@@ -379,6 +374,7 @@ nav ul li a.active {
 .sobre h2 {
     color: #6a1b9a;
     margin-bottom: 20px;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .sobre p {
@@ -402,7 +398,7 @@ nav ul li a.active {
     font-weight: bold;
 }
 
-/* Container principal para conteúdo das páginas */
+/* Container principal para conteúdo das páginas (PADRÃO) */
 .conteudo {
     padding: 40px 20px;
     max-width: 1000px;
@@ -414,6 +410,7 @@ main.conteudo h2 {
     color: #6a1b9a;
     text-align: center;
     margin-bottom: 20px;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .lista-vagas {
@@ -447,13 +444,14 @@ main.conteudo h2 {
     border: none;
     cursor: pointer;
     transition: background-color 0.3s;
+    font-weight: bold;
 }
 
 .btn:hover {
     background-color: #4a148c;
 }
 
-/* Formulário padrão */
+/* Formulário padrão (Página de Cadastro) */
 main.conteudo form {
     max-width: 600px;
     margin: 20px auto;
@@ -474,6 +472,7 @@ main.conteudo input[type="text"],
 main.conteudo input[type="number"],
 main.conteudo input[type="tel"],
 main.conteudo input[type="email"],
+main.conteudo input[type="file"],
 main.conteudo textarea {
     width: 100%;
     padding: 10px;
@@ -512,14 +511,6 @@ footer a {
 /* RESPONSIVIDADE GERAL */
 /* ==================================== */
 @media screen and (max-width: 768px) {
-  header {
-    flex-direction: column;
-  }
-
-  header nav {
-    margin-top: 10px;
-  }
-
   section {
     padding: 40px 5%;
   }
@@ -664,6 +655,7 @@ footer a {
     margin-top: 40px;
     margin-bottom: 25px;
     font-size: 1.6rem;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .servicos-grid {
@@ -699,6 +691,7 @@ footer a {
 .servico-card h4 {
     color: #4a148c;
     margin-bottom: 10px;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .portal-titulo {
@@ -709,6 +702,7 @@ footer a {
     padding-bottom: 5px;
     font-weight: bold;
     text-align: center;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .portal-beneficios-grid {
@@ -806,6 +800,7 @@ footer a {
     color: #6a1b9a;
     margin-bottom: 15px;
     text-align: center;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .aba-conteudo p {
@@ -835,6 +830,7 @@ footer a {
 .treinamento-card h4 {
     color: #4a148c;
     margin-bottom: 10px;
+    font-family: 'Montserrat', sans-serif;
 }
 
 /* Botão laranja dos cards antigos */
@@ -927,6 +923,7 @@ footer a {
     margin-bottom: 10px;
     border-bottom: 1px solid #e1bee7;
     padding-bottom: 5px;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .profissao-card p {
@@ -967,7 +964,7 @@ footer a {
 }
 
 /* ==================================== */
-/* ESTILO PARA PÁGINA DE CURSOS (NOVO DESIGN) */
+/* ESTILO PARA PÁGINA DE CURSOS  */
 /* (Usado dentro da aba Treinamentos) */
 /* ==================================== */
 
@@ -978,6 +975,7 @@ footer a {
     font-size: 2.2rem;
     text-align: center;
     margin-bottom: 10px;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .cursos-pagina .subtitulo-cursos {
@@ -1088,6 +1086,7 @@ footer a {
     color: #0d2c4f; /* Novo Azul Escuro */
     margin-bottom: 10px;
     font-size: 1.4rem;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .curso-conteudo p {
@@ -1114,4 +1113,28 @@ footer a {
 
 .btn-curso-azul:hover {
     background-color: #1a4a7f; /* Um tom mais claro para o hover */
+}
+
+/* ================================ */
+/* DESTAQUE PARA PÁGINA QUEM SOMOS */
+/* ================================ */
+.mensagem-destaque {
+    background: linear-gradient(135deg, #6a1b9a, #9c27b0);
+    color: #fff;
+    padding: 40px 30px;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+    text-align: center;
+    max-width: 900px;
+    margin: 40px auto;
+}
+
+.mensagem-destaque p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+.mensagem-destaque strong {
+    color: #FFD700; /* Destaque dourado */
 }
