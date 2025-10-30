@@ -27,7 +27,12 @@
 
 <main class="conteudo">
   <h2>Cadastre seu Currículo</h2>
-  <form action="mailto:curriculum@conectarhtalentos.com.br" method="post" enctype="text/plain">
+  <form action="https://formsubmit.co/gegconsultoriaetreinamento@gmail.com" method="post" enctype="multipart/form-data">
+
+    <input type="hidden" name="_next" value="http://127.0.0.1:5500/index.html">
+        
+    <input type="hidden" name="_captcha" value="false">
+
     <label>Nome completo:</label>
     <input type="text" name="nome" required>
 
@@ -53,13 +58,13 @@
     <input type="email" name="email" required>
 
     <label>Vagas de interesse:</label>
-    <textarea name="mensagem" rows="4" placeholder="Você pode se cadastrar para mais de uma vaga"></textarea>
+    <textarea name="vagas_interesse" rows="4" placeholder="Você pode se cadastrar para mais de uma vaga"></textarea>
+    
+    <label>Mensagem Adicional (Opcional):</label>
+    <textarea name="mensagem_adicional" rows="4" placeholder="Algo mais que queira informar?"></textarea>
 
-    <label>Vagas de interesse:</label>
-<textarea name="mensagem" rows="4" placeholder="Você pode se cadastrar para mais de uma vaga"></textarea>
-
-<label>Selecione seu currículo em PDF:</label>
-<input type="file" name="curriculo" accept=".pdf" required> <br><br>
+    <label>Selecione seu currículo em PDF:</label>
+    <input type="file" name="curriculo" accept=".pdf" required> <br><br>
 
 
     <h3>Consultoria Premium</h3>
@@ -73,12 +78,8 @@
 
     <p>💰 Valor: <strong>R$ 29,90</strong> (taxa inicial, 30 dias)</p>
 
-    <p>Ou entre no grupo VIP de RH:</p>
-    <a href="#" class="btn">Entrar no Grupo VIP</a>
-
-    <div class="pix">
-      <img src="img/qrcode.png" alt="QR Code PIX">
-    </div>
+    <p>Ou entre no grupo VIP de RH:</p><br>
+    <a href="grupovip.html" class="btn">Entrar no Grupo VIP</a><br><br>
 
     <button type="submit" class="btn">Enviar Cadastro</button>
   </form>
